@@ -8,7 +8,6 @@ namespace Sana05
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
-            Console.InputEncoding = Encoding.UTF8;
 
             List<Vehicle> vehicles = new List<Vehicle>();
 
