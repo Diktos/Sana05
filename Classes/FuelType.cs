@@ -8,8 +8,8 @@ namespace Classes
 {
     public enum FuelType
     {
-        Бензин,   
-        Дизель,   
-        Електро  
+        Petrol,   
+        Diesel,   
+        Electric  
     }
 }

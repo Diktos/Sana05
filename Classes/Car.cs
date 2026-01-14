@@ -21,14 +21,24 @@ namespace Classes
             Console.WriteLine($"Легковий автомобіль: {Brand} {Model} {Year}");
             Console.WriteLine($"Ціна: {Price} грн");
             Console.WriteLine($"Кількість дверей: {NumberOfDoors}");
-            Console.WriteLine($"Тип палива: {FuelType}");
+
+            string fuelType = string.Empty;
+            switch (FuelType)
+            {
+                case FuelType.Petrol: fuelType = "Бензин"; break;
+                case FuelType.Diesel: fuelType = "Дизель"; break;
+                case FuelType.Electric: fuelType = "Електро"; break;
+                default: fuelType = "Бензин"; break;
+            }
+
+            Console.WriteLine($"Тип палива: {fuelType}");
             Console.WriteLine($"Максимальна швидкість: {GetMaxSpeed()} км/год");
             Console.WriteLine($"Транспортний податок: {CalculateTax()} грн");
             Console.WriteLine();
         }
         public override double CalculateTax()
         {
-            if (FuelType == FuelType.Електро)
+            if (FuelType == FuelType.Electric)
             {
                 return Price * 0.005;
             }

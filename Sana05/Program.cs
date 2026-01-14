@@ -12,10 +12,10 @@ namespace Sana05
 
             List<Vehicle> vehicles = new List<Vehicle>();
 
-            vehicles.Add(new Car("Toyota", "Camry", 2022, 850000, 4, FuelType.Бензин));
+            vehicles.Add(new Car("Toyota", "Camry", 2022, 850000, 4, FuelType.Petrol));
             vehicles.Add(new Truck("MAN", "TGX", 2021, 2500000, 20, 3));
             vehicles.Add(new Motorcycle("Honda", "CBR 1000RR", 2020, 500000, 1000, true));
-            vehicles.Add(new Car("Volkswagen", "Golf 8", 2023, 1200000, 5, FuelType.Електро));
+            vehicles.Add(new Car("Volkswagen", "Golf 8", 2023, 1200000, 5, FuelType.Electric));
             vehicles.Add(new Motorcycle("BMW", "R 1250 GS", 2023, 850000, 1254, true));
 
             Console.WriteLine("=== Інформація про транспортні засоби ===\n");
