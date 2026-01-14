@@ -28,7 +28,7 @@ namespace Classes
         }
         public override double CalculateTax()
         {
-            if (FuelType == FuelType.Electric)
+            if (FuelType == FuelType.Електро)
             {
                 return Price * 0.005;
             }
