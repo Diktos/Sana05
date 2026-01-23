@@ -13,6 +13,10 @@ namespace Classes
         public Motorcycle(string brand, string model, int year, double price, double engineVolume, bool hasWindshield)
             : base(brand, model, year, price)
         {
+            if (engineVolume <= 0 || engineVolume > 10000)
+            {
+                throw new ArgumentOutOfRangeException(nameof(engineVolume),"Об'єм двигуна має бути більше за 0 та менше 10 000 см³!");
+            }
             EngineVolume = engineVolume;
             HasWindshield = hasWindshield;
         }

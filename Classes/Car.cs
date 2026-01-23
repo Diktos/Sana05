@@ -11,8 +11,12 @@ namespace Classes
         public int NumberOfDoors { get; set; }
         public FuelType FuelType { get; set; }
         public Car(string brand, string model, int year, double price, int numberOfDoors, FuelType fuelType)
-            : base(brand, model, year, price)
+             : base(brand, model, year, price) 
         {
+            if (numberOfDoors < 2 || numberOfDoors > 10)
+            {
+                throw new ArgumentOutOfRangeException(nameof(numberOfDoors), "Кількість дверей має бути в межах від 2 до 10!");
+            }
             NumberOfDoors = numberOfDoors;
             FuelType = fuelType;
         }
@@ -28,7 +32,7 @@ namespace Classes
                 case FuelType.Petrol: fuelType = "Бензин"; break;
                 case FuelType.Diesel: fuelType = "Дизель"; break;
                 case FuelType.Electric: fuelType = "Електро"; break;
-                default: fuelType = "Бензин"; break;
+                default: fuelType = "Невідомо"; break;
             }
 
             Console.WriteLine($"Тип палива: {fuelType}");

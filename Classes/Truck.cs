@@ -13,6 +13,14 @@ namespace Classes
         public Truck(string brand, string model, int year, double price, double loadCapacity, int numberOfAxles)
             : base(brand, model, year, price)
         {
+            if (loadCapacity <= 0 || loadCapacity > 1000)
+            {
+                throw new ArgumentOutOfRangeException(nameof(loadCapacity), "Вантажопідйомність має бути більшою за 0 і меншою за 1000 тонн!");
+            }
+            if (numberOfAxles < 2 || numberOfAxles > 20)
+            {
+                throw new ArgumentOutOfRangeException(nameof(numberOfAxles), "Кількість осей має бути від 2 до 20!");
+            }
             LoadCapacity = loadCapacity;
             NumberOfAxles = numberOfAxles;
         }
